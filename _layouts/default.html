@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="zh-CN">
 <head>
-
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-<title>{{ page.title }}</title>
-
+    {% include head.html %}
 </head>
-
 <body>
-
-    <!-- { % include navbar.html % } -->
-
-    <!-- <div>
-        _layouts/default.html
-    </div> -->
-
-    {{ content }}
-
-    <!-- { % include comment.html % } -->
-
-    <!-- { % include footer.html % } -->
-
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+    
+    {% include navbar.html %}
+    
+    <main class="main-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+    
+    {% include footer.html %}
+    
+    <!-- 粒子特效脚本 -->
+    <script src="{{ '/assets/js/particles.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/particle-controls.js' | relative_url }}"></script>
+    <!-- 搜索功能脚本 -->
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
-
 </html>

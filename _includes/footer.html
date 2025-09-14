@@ -1,3 +1,16 @@
-<div></div>
-    页脚:_include/footer.html
-</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-info">
+            <h3>{{ site.title }}</h3>
+            <p>{{ site.description }}</p>
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+            <a href="{{ '/' | relative_url }}">首页</a>
+            <a href="{{ '/about' | relative_url }}">关于</a>
+            <a href="{{ '/archive' | relative_url }}">归档</a>
+            <a href="{{ '/contact' | relative_url }}">联系</a>
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+    </div>
+</footer>

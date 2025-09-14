@@ -1,1 +1,55 @@
+# Site settings
+title: Livvenpan's Blog
+description: 个人技术博客，分享编程心得和技术思考
 baseurl: /Livvenpan.blog
+url: https://livvenpan.github.io
+
+# Author settings
+author:
+  name: Livvenpan
+  email: 453164837@qq.com
+  bio: 热爱编程的技术人
+  avatar: /assets/images/avatar.jpg
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Shanghai
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins (commented out to avoid dependency issues)
+# plugins:
+#   - jekyll-feed
+#   - jekyll-sitemap
+#   - jekyll-seo-tag
+
+# Include _posts directory for direct access
+include:
+  - _posts
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
